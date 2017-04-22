@@ -18,10 +18,10 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loaders: ['babel'],
+        use: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },
       { 

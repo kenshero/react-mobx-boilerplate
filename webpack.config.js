@@ -12,14 +12,14 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    rules: [{
         test: /\.js$/,
-        loaders: ['babel'],
+        use: ['babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.css$/, //scss if you want  
-        loaders: ['style','css']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
